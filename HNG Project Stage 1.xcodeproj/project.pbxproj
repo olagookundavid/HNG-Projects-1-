@@ -11,6 +11,8 @@
 		BE8AC4672AABA7E1005CDBDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8AC4662AABA7E1005CDBDE /* ContentView.swift */; };
 		BE8AC4692AABA7E3005CDBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE8AC4682AABA7E3005CDBDE /* Assets.xcassets */; };
 		BE8AC46C2AABA7E3005CDBDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE8AC46B2AABA7E3005CDBDE /* Preview Assets.xcassets */; };
+		BE8AC4782AAD4DB9005CDBDE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8AC4772AAD4DB9005CDBDE /* WebView.swift */; };
+		BE8AC47A2AAE1220005CDBDE /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8AC4792AAE1220005CDBDE /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BE8AC4662AABA7E1005CDBDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE8AC4682AABA7E3005CDBDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE8AC46B2AABA7E3005CDBDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE8AC4772AAD4DB9005CDBDE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		BE8AC4792AAE1220005CDBDE /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				BE8AC4662AABA7E1005CDBDE /* ContentView.swift */,
 				BE8AC4682AABA7E3005CDBDE /* Assets.xcassets */,
 				BE8AC46A2AABA7E3005CDBDE /* Preview Content */,
+				BE8AC4772AAD4DB9005CDBDE /* WebView.swift */,
+				BE8AC4792AAE1220005CDBDE /* PrimaryButton.swift */,
 			);
 			path = "HNG Project Stage 1";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8AC4782AAD4DB9005CDBDE /* WebView.swift in Sources */,
 				BE8AC4672AABA7E1005CDBDE /* ContentView.swift in Sources */,
+				BE8AC47A2AAE1220005CDBDE /* PrimaryButton.swift in Sources */,
 				BE8AC4652AABA7E1005CDBDE /* HNG_Project_Stage_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
