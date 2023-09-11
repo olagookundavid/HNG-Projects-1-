@@ -8,33 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var fullName = "Olagookun David"
+    @State private var slackName = "David OH"
+    @State private var githubName = "@olagookundavid"
+    @State private var aboutMe = "Mobile Developer with experience building with SwiftUI and Flutter. Speaker and Communities focused."
     var body: some View {
         NavigationStack {
-            VStack( spacing:30) {
-                Image("me")
-                    .resizable()
-                    .frame(maxWidth: .infinity,maxHeight: 350)
-                    .cornerRadius(10)
-                Text("I am David OH")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.gray)
-                Text("Mobile Developer with experience building with SwiftUI and Flutter. Speaker and Communities focused.")
-                    .multilineTextAlignment(.center)
-                    .fontWeight(.semibold)
-                    .font(.body)
-                    .padding(.top,10)
-                NavigationLink {
-                    WebView(url: URL(string: "https://github.com/olagookundavid")!)
-                } label: {
-                    PrimaryButton(text: "Checkout my GitHub")
-                        .padding(.top,50)
+          
+                Form {
+                    Section(header: Text("Full Name")) {
+                        Text(fullName)
+                    }.headerProminence(.increased)
+                    
+                    Section(header: Text("Slack User Name")) {
+                        Text(slackName)
+                    }.headerProminence(.increased)
+                    
+                    Section(header: Text("GitHub Handle")) {
+                        Text(githubName)
+                    }.headerProminence(.increased)
+                 
+                    Section(header:  Text("About Me")) {
+                            Text(aboutMe)
+                                .multilineTextAlignment(.leading)
+                                .fontWeight(.semibold)
+                                .font(.body)
+                                .padding(.top,10)
+                        }.headerProminence(.increased)
+                    
+                }.scrollContentBackground(.hidden)
+                .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+                .navigationTitle("Main Screen")
+                .toolbar{
+                    ToolbarItem(placement: .primaryAction){
+                        NavigationLink {
+                            EditingScreen(fullName: $fullName,slackName: $slackName,githubName: $githubName,aboutMe: $aboutMe)
+                        } label: {
+                            PrimaryButton(text: "Edit Screen")
+                        }
+                    }
                 }
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
-            .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         }
         
     }
@@ -45,4 +58,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
+private extension ContentView{
+    var background: some View{
+        Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118).ignoresSafeArea(edges:.top)
+    }
+}
